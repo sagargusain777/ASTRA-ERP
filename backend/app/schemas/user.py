@@ -3,8 +3,8 @@ from datetime import datetime
 from typing import Optional
 
 class LoginRequest(BaseModel):
-    email:Optional[EmailStr]
-    phone_number:Optional[str]
+    email:Optional[EmailStr] = None
+    phone_number:Optional[str] = None
     password:str
 
 class LoginResponse(BaseModel):
