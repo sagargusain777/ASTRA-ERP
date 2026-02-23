@@ -8,7 +8,8 @@ class Settings(BaseSettings):
     #JWT
     JWT_SECRET_KEY:str = 'my-secret'
     JWT_ALGORITHM:str = "HS256"
-    JWT_ACCESS_TOKEN_EXPIRES_MINUTES:int | None = None
+    JWT_ACCESS_TOKEN_EXPIRES_MINUTES:int = 15
+    JWT_REFRESH_TOKEN_EXPIRES_DAYS: int = 7
     #Qdrant Vector Database
     QDRANT_API_KEY:str | None = None
     QDRANT_COLLECTION_NAME:str | None = None
